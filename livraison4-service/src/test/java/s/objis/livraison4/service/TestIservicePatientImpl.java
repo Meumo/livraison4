@@ -12,7 +12,7 @@ import sn.objis.livraison4.domaine.Patient;
 import sn.objis.livraison4.service.IServicePatientImpl;
 
 /**
- * Date Juillet 23-2018 # La classe 'TestIservicePatientImpl' est con�ue pour
+ * Date Juillet 23-2018 # La classe 'TestIservicePatientImpl' est connue pour
  * tester les differentes methodes de la classe 'IServicePatientImpl'
  * 
  * @author DIOUF Mamadou

@@ -90,19 +90,19 @@ public class Patient {
 	 * String codePatient)
 	 * 
 	 * @param nomPatient
-	 *            Param�tre qui stocke le nom
+	 *            Parametre qui stocke le nom
 	 * @param prenomPatient
-	 *            Param�tre qui stocke le prenom
+	 *            Parametre qui stocke le prenom
 	 * @param sexePatient
-	 *            Param�tre qui stocke le sexe
+	 *            Parametre qui stocke le sexe
 	 * @param agePatient
-	 *            Param�tre qui stocke l'age
+	 *            Parametre qui stocke l'age
 	 * @param adressePatient
-	 *            Param�tre qui stocke l'adresse
+	 *            Parametre qui stocke l'adresse
 	 * @param assurancePatient
-	 *            Param�tre qui stocke l'assurance
+	 *            Parametre qui stocke l'assurance
 	 * @param codePatient
-	 *            Param�tre qui stocke le code
+	 *            Parametre qui stocke le code
 	 */
 	public Patient(String nomPatient, String prenomPatient, String sexePatient, int agePatient, String adressePatient,
 			String assurancePatient, String codePatient) {

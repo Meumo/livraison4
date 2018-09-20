@@ -1,7 +1,7 @@
 package sn.objis.livraison4.utils;
 /**
  * Cette classe met en oeuvre le design pattern singleton
- * elle permet de restreindre les acc�s � la base en une et une seule instance de
+ * elle permet de restreindre les acces la base en une et une seule instance de
  * connection
  * @author DIOUF Mamadou
  *
@@ -53,9 +53,7 @@ public class MysqlConnection {
 	public static Connection getInstanceConnection() {
 		try {
 			if (conn == null) {
-				 conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-					        "user=" + userDb + "&password=" + passworddDb);
-				//conn = DriverManager.getConnection(url, userDb, passworddDb);
+				conn = DriverManager.getConnection(url, userDb, passworddDb);
 				System.out.println("\tConnexion �tablie avec la base");
 				System.out.println("------------------------------------------------------------");
 			}

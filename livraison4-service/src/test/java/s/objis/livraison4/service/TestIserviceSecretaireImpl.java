@@ -12,8 +12,8 @@ import sn.objis.livraison4.domaine.Secretaire;
 import sn.objis.livraison4.service.IServiceSecretaireImpl;
 
 /**
- * Date Juillet 23-2018 # La classe 'TestIserviceSecretaireImpl' est con�ue pour
- * tester les differentes m�thodes de la classe 'IServiceSecretaireImpl'
+ * Date Juillet 23-2018 # La classe 'TestIserviceSecretaireImpl' est connue pour
+ * tester les differentes methodes de la classe 'IServiceSecretaireImpl'
  * 
  * @author DIOUF Mamadou
  *

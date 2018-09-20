@@ -22,7 +22,7 @@ import sn.objis.livraison4.utils.MysqlConnection;
 public class IDaoSecretaireImpl implements IDaoSecretaire {
 
 	/**
-	 * Creation d'une instance de connexion pour acceder � la base de donnees
+	 * Creation d'une instance de connexion pour acceder a la base de donnees
 	 */
 	Connection con = MysqlConnection.getInstanceConnection();
 

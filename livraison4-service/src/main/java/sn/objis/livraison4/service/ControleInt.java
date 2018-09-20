@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class ControleInt {
 	/**
-	 * La methode 'controleEntier' satic ne re�oit rien comme Parametre et renvoie
+	 * La methode 'controleEntier' satic ne recoit rien comme Parametre et renvoie
 	 * un int
 	 * 
 	 * @return int (retourne un entier)

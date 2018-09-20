@@ -18,7 +18,7 @@ import sn.objis.livraison4.utils.MysqlConnection;
 public class GenerateCode {
 
 	/**
-	 * Creation d'une instance de connexion pour acceder � la base de donnees
+	 * Creation d'une instance de connexion pour acceder a la base de donnees
 	 */
 	Connection con = MysqlConnection.getInstanceConnection();
 
@@ -81,7 +81,7 @@ public class GenerateCode {
 	}
 
 	/**
-	 * La methode 'generateCodeSecretaire' a pour r�le de creer le code d'un
+	 * La methode 'generateCodeSecretaire' a pour role de creer le code d'un
 	 * secretaire et de le retourner.
 	 * 
 	 * @return une chaine (String) le code cree

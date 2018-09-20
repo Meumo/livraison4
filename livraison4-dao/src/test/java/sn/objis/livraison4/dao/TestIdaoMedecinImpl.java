@@ -9,7 +9,7 @@ import org.mockito.Mockito;
 
 import sn.objis.livraison4.domaine.Medecin;
 /**
- * Date Juillet 23-2018 # La classe 'TestIdaoMedecinImpl' est con�ue pour tester
+ * Date Juillet 23-2018 # La classe 'TestIdaoMedecinImpl' est connue pour tester
  * les differentes methodes de la classe 'IdaoMedecinImpl'
  * 
  * @author DIOUF Mamadou

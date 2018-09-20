@@ -31,7 +31,7 @@ public class Menu {
 	public static void menuMedecin() {
 		System.out.println("\t\nGESTION MEDECIN");
 		System.out.println("1.Creer un medecin");
-		System.out.println("2.Mettre a jour les donn�es d'un medecin");
+		System.out.println("2.Mettre a jour les donnees d'un medecin");
 		System.out.println("3.Supprimer un medecin");
 		System.out.println("4.Rechercher un medecin avec son code");
 		System.out.println("5.Lister les medecins");
@@ -46,8 +46,8 @@ public class Menu {
 	 */
 	public static void menuPatient() {
 		System.out.println("\t\nGESTION PATIENT");
-		System.out.println("1.Cr�er un patient");
-		System.out.println("2.Mettre � jour les donn�es d'un patient");
+		System.out.println("1.Creer un patient");
+		System.out.println("2.Mettre a jour les donnees d'un patient");
 		System.out.println("3.Supprimer un patient");
 		System.out.println("4.Rechercher un patient avec son code");
 		System.out.println("5.Lister les patients");
@@ -62,11 +62,11 @@ public class Menu {
 	 */
 	public static void menuSecretaire() {
 		System.out.println("\t\nGESTION SECRETAIRE");
-		System.out.println("1.Creer une S�cr�taire");
-		System.out.println("2.Mettre a jour les donn�es d'une s�cr�taire");
-		System.out.println("3.Supprimer une s�cr�taire");
-		System.out.println("4.Rechercher une s�cr�taire avec son code");
-		System.out.println("5.Lister les s�cr�taires");
+		System.out.println("1.Creer une Secretaire");
+		System.out.println("2.Mettre a jour les donnees d'une secretaire");
+		System.out.println("3.Supprimer une scretaire");
+		System.out.println("4.Rechercher une secretaire avec son code");
+		System.out.println("5.Lister les secretaires");
 		System.out.println("6.Retour au menu precedent");
 
 		System.out.println("Faites votre choix(1/2/3/4/5/6)");

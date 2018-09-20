@@ -12,8 +12,8 @@ import sn.objis.livraison4.domaine.Medecin;
 import sn.objis.livraison4.service.IServiceMedecinImpl;
 
 /**
- * Date Juillet 23-2018 # La classe 'TestIserviceMedecinImpl' est con�ue pour
- * tester les differentes m�thodes de la classe 'IServiceMedecinImpl'
+ * Date Juillet 23-2018 # La classe 'TestIserviceMedecinImpl' est connue pour
+ * tester les differentes methodes de la classe 'IServiceMedecinImpl'
  * 
  * @author DIOUF Mamadou
  *

@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Date Juillet 23-2018 # L'interface IDaoGenerique c'est une interface
- * generique qui contient nos m�thodes g�n�rique.
+ * generique qui contient nos methodes generique.
  * 
  * @author DIOUF Mamadou
  *
@@ -30,11 +30,11 @@ public interface IDaoGenerique<X> {
 	public List<X> read();
 
 	/**
-	 * La methode 'update()' generique a pour but de mettre � jour les donnees d'une
-	 * ligne pr�cise dans une base de donnees relationnelle.
+	 * La methode 'update()' generique a pour but de mettre a jour les donnees d'une
+	 * ligne precise dans une base de donnees relationnelle.
 	 * 
 	 * @param x
-	 *            Parametre de type g�n�rique
+	 *            Parametre de type generique
 	 */
 	public void update(X x);
 

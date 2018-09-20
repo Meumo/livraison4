@@ -9,7 +9,7 @@ import java.util.List;
  * @author DIOUF Mamadou
  *
  * @param <X>
- *            Param�tre de type g�n�rique
+ *            Parametre de type generique
  */
 public interface IServiceGenerique<X> {
 	/**
@@ -30,7 +30,7 @@ public interface IServiceGenerique<X> {
 	public List<X> lire();
 
 	/**
-	 * La methode 'modifier()' generique a pour but de mettre � jour les donnees
+	 * La methode 'modifier()' generique a pour but de mettre a jour les donnees
 	 * d'une ligne precise dans une base de donnees relationnelle.
 	 * 
 	 * @param x
@@ -52,7 +52,7 @@ public interface IServiceGenerique<X> {
 	 * les donnees dans une base de donnees relationnelle.
 	 * 
 	 * @param code
-	 *            Parametre que re�oit notre methode 'findByCode'
+	 *            Parametre que recoit notre methode 'findByCode'
 	 * @return X (type generique) Retourne l'objet trouve
 	 */
 	public X chercherParCode(String code);

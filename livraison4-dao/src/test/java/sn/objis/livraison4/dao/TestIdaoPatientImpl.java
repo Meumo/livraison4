@@ -11,7 +11,7 @@ import junit.framework.Assert;
 import sn.objis.livraison4.domaine.Patient;
 
 /**
- * Date Juillet 23-2018 # La classe 'TestIdaoPatientImpl' est con�ue pour tester
+ * Date Juillet 23-2018 # La classe 'TestIdaoPatientImpl' est connue pour tester
  * les differentes methodes de la classe 'IdaoPatientImpl'
  * 
  * @author DIOUF Mamadou

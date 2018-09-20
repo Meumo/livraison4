@@ -18,7 +18,7 @@ public class Secretaire {
 	 */
 	private String nomSecretaire;
 	/**
-	 * Champ qui stocke le pr�nom d'une secretaire
+	 * Champ qui stocke le prenom d'une secretaire
 	 */
 	private String prenomSecretaire;
 	/**
