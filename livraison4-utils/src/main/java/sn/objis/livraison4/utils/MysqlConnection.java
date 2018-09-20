@@ -52,8 +52,10 @@ public class MysqlConnection {
 	 */
 	public static Connection getInstanceConnection() {
 		try {
-			if (conn == null) {// Accune connexion avec la base
-				conn = DriverManager.getConnection(url, userDb, passworddDb);
+			if (conn == null) {
+				 conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+					        "user=" + userDb + "&password=" + passworddDb);
+				//conn = DriverManager.getConnection(url, userDb, passworddDb);
 				System.out.println("\tConnexion �tablie avec la base");
 				System.out.println("------------------------------------------------------------");
 			}
