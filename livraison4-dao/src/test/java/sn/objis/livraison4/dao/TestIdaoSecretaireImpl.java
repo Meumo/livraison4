@@ -12,7 +12,7 @@ import sn.objis.livraison4.domaine.Secretaire;
 
 /**
  * Date Juillet 23-2018 # La classe 'TestIdaoSecreatireImpl' est connue pour
- * tester les differentes m�thodes de la classe 'IdaoSecreatireImpl'
+ * tester les differentes methodes de la classe 'IdaoSecreatireImpl'
  * 
  * @author DIOUF Mamadou
  *

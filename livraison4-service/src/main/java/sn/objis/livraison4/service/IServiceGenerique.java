@@ -34,13 +34,13 @@ public interface IServiceGenerique<X> {
 	 * d'une ligne precise dans une base de donnees relationnelle.
 	 * 
 	 * @param x
-	 *            Param�tre de type g�n�rique
+	 *            Param�tre de type generique
 	 */
 	public void modifier(X x);
 
 	/**
 	 * La methode 'supprimer(X x)' generique a pour but de supprimer les donnees
-	 * d'une ligne pr�cise dans une base de donnees relationnelle.
+	 * d'une ligne precise dans une base de donnees relationnelle.
 	 * 
 	 * @param x
 	 *            Parametre de type generique

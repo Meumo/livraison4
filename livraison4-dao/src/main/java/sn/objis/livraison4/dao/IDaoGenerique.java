@@ -52,7 +52,7 @@ public interface IDaoGenerique<X> {
 	 * donnees dans une base de donnees relationnelle.
 	 * 
 	 * @param code
-	 *            Parametre que re�oit notre methode 'findByCode'
+	 *            Parametre que recoit notre methode 'findByCode'
 	 * @return X (Type generique) Retourne l'objet trouve
 	 */
 	public X findByCode(String code);

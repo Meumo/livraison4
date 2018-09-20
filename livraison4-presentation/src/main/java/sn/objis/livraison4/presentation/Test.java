@@ -53,7 +53,7 @@ public class Test {
 					iServiceMedecinImpl.ajouter(medecin);
 					break;
 				case 2:
-					System.out.println("Entrer le code du medecin � modifier");
+					System.out.println("Entrer le code du medecin a modifier");
 					String code = sc.nextLine();
 					Medecin nouveauMedecin = iServiceMedecinImpl.chercherParCode(code);
 					if (nouveauMedecin != null) {
@@ -69,7 +69,7 @@ public class Test {
 					}
 					break;
 				case 3:
-					System.out.println("Entrer le code du medecin � supprimer");
+					System.out.println("Entrer le code du medecin a supprimer");
 					Medecin medecinASupprimer = iServiceMedecinImpl.chercherParCode(sc.nextLine());
 					if (medecinASupprimer != null)
 						iServiceMedecinImpl.supprimer(medecinASupprimer);
@@ -77,7 +77,7 @@ public class Test {
 						System.out.println("cet medecin n'existe pas");
 					break;
 				case 4:
-					System.out.println("Entrer le code du medecin � rechercher");
+					System.out.println("Entrer le code du medecin a rechercher");
 					Medecin medecinARechercher = iServiceMedecinImpl.chercherParCode(sc.nextLine());
 					if (medecinARechercher != null)
 						System.out.println(medecinARechercher);
@@ -130,7 +130,7 @@ public class Test {
 					iServicePatientImpl.ajouter(patient);
 					break;
 				case 2:
-					System.out.println("Entrer le code du patient � modifier");
+					System.out.println("Entrer le code du patient a modifier");
 					String code = sc.nextLine();
 					Patient nouveauPatient = iServicePatientImpl.chercherParCode(code);
 					if (nouveauPatient != null) {
@@ -153,7 +153,7 @@ public class Test {
 					}
 					break;
 				case 3:
-					System.out.println("Entrer le code du patient � supprimer");
+					System.out.println("Entrer le code du patient a supprimer");
 					String codeSup = sc.nextLine();
 					Patient patientASupprimer = iServicePatientImpl.chercherParCode(codeSup);
 					if (patientASupprimer != null)
@@ -162,7 +162,7 @@ public class Test {
 						System.out.println("cet patient n'existe pas");
 					break;
 				case 4:
-					System.out.println("Entrer le code du patient � rechercher");
+					System.out.println("Entrer le code du patient a rechercher");
 					String codePat = sc.nextLine();
 					Patient patientARechercher = iServicePatientImpl.chercherParCode(codePat);
 					if (patientARechercher != null)
@@ -208,7 +208,7 @@ public class Test {
 					iServiceSecretaireImpl.ajouter(secretaire);
 					break;
 				case 2:
-					System.out.println("Entrer le code s�cr�taire � modifier");
+					System.out.println("Entrer le code secretaire a modifier");
 					String code = sc.nextLine();
 					Secretaire nouvelleSecretaire = iServiceSecretaireImpl.chercherParCode(code);
 					if (nouvelleSecretaire != null) {
@@ -222,22 +222,22 @@ public class Test {
 					}
 					break;
 				case 3:
-					System.out.println("Entrer le code s�cr�taire � supprimer");
+					System.out.println("Entrer le code secretaire a supprimer");
 					String codeSecASup = sc.nextLine();
 					Secretaire secretaireASup = iServiceSecretaireImpl.chercherParCode(codeSecASup);
 					if (secretaireASup != null)
 						iServiceSecretaireImpl.supprimer(secretaireASup);
 					else
-						System.out.println("cette s�cr�taire n'existe pas");
+						System.out.println("cette secretaire n'existe pas");
 					break;
 				case 4:
-					System.out.println("Entrer le code s�cr�taire � rechercher");
+					System.out.println("Entrer le code secretaire a rechercher");
 					String codeSecARech = sc.nextLine();
 					Secretaire secretaireARech = iServiceSecretaireImpl.chercherParCode(codeSecARech);
 					if (secretaireARech != null)
 						System.out.println(secretaireARech);
 					else
-						System.out.println("cette s�cr�taire n'existe pas");
+						System.out.println("cette secretaire n'existe pas");
 					break;
 				case 5:
 					List<Secretaire> listSecretaire = iServiceSecretaireImpl.lire();
@@ -246,7 +246,7 @@ public class Test {
 						str.forEach(System.out::println);
 						System.out.println("");
 					} else
-						System.out.println("La liste des s�cr�taires est vide");
+						System.out.println("La liste des secretaires est vide");
 					break;
 				case 6:
 					Test.main(args);
@@ -264,12 +264,12 @@ public class Test {
 			System.out.println("Voulez-vous vraiment quitter l'application (o/n)?");
 			String res = sc.nextLine();
 			if (res.equals("o") || res.equals("O")) {
-				System.out.println("Aurevoir A Bient�t!!");
+				System.out.println("Aurevoir A Bientot!!");
 				System.exit(0);
 			} else
 				Test.main(args);
 		default:
-			System.out.println("V�rifiez votre choix(1/2/3/4)");
+			System.out.println("Verifiez votre choix(1/2/3/4)");
 			Test.main(args);
 			break;
 		}

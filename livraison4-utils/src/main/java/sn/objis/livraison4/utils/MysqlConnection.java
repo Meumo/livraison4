@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 /**
  * Date Juillet 23-2018 # Cette classe met en oeuvre le design pattern singleton
- * elle permet de restreindre les acces � la base en une et une seule instance
+ * elle permet de restreindre les acces a la base en une et une seule instance
  * de connection.
  * 
  * @author DIOUF Mamadou
@@ -22,7 +22,7 @@ import java.sql.SQLException;
 public class MysqlConnection {
 
 	/**
-	 * url pour acceder � ala base de donnees
+	 * url pour acceder a la base de donnees
 	 */
 	private static String url = "jdbc:mysql://localhost/gestionclinique";
 	/**
@@ -34,7 +34,7 @@ public class MysqlConnection {
 	 */
 	private static String passworddDb = "mamadou";
 	/**
-	 * l'unique instance de connexion � la base
+	 * l'unique instance de connexion a la base
 	 */
 	private static Connection conn = null;
 
@@ -54,11 +54,11 @@ public class MysqlConnection {
 		try {
 			if (conn == null) {
 				conn = DriverManager.getConnection(url, userDb, passworddDb);
-				System.out.println("\tConnexion �tablie avec la base");
+				System.out.println("\tConnexion etablie avec la base");
 				System.out.println("------------------------------------------------------------");
 			}
 		} catch (SQLException e) {
-			System.out.println("Probl�me de connexion");
+			System.out.println("Probleme de connexion");
 			e.printStackTrace();
 		}
 		return conn;
