@@ -27,7 +27,7 @@ public class TestIserviceSecretaireImpl {
 	IServiceSecretaireImpl iServiceSecretaireImpl;
 
 	/**
-	 * cette methode sera execut�e avant le lancement des tests
+	 * cette methode sera executee avant le lancement des tests
 	 */
 	@Before
 	public void init() {

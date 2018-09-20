@@ -34,7 +34,7 @@ public interface IServiceGenerique<X> {
 	 * d'une ligne precise dans une base de donnees relationnelle.
 	 * 
 	 * @param x
-	 *            Param�tre de type generique
+	 *            Parametre de type generique
 	 */
 	public void modifier(X x);
 

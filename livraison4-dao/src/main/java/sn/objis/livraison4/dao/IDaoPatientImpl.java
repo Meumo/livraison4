@@ -84,9 +84,9 @@ public class IDaoPatientImpl implements IDaoPatient {
 			ps.setString(6, x.getAssurancePatient());
 			ps.setString(7, x.getCodePatient());
 			ps.executeUpdate();
-			System.out.println("Mis � jour reussie");
+			System.out.println("Mis a jour reussie");
 		} catch (SQLException e) {
-			System.out.println("Erreur Mis � jour ");
+			System.out.println("Erreur Mis a jour ");
 			e.printStackTrace();
 		}
 

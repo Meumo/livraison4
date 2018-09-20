@@ -75,9 +75,9 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 			ps.setString(3, x.getSexeMedecin());
 			ps.setString(4, x.getCodeMedecin());
 			ps.executeUpdate();
-			System.out.println("Mis � jour reussie");
+			System.out.println("Mis a jour reussie");
 		} catch (SQLException e) {
-			System.out.println("Erreur Mis � jour ");
+			System.out.println("Erreur Mis a jour ");
 			e.printStackTrace();
 		}
 	}
@@ -107,7 +107,7 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 						rs.getString("prenom_medecin"), rs.getString("sexe_medecin"), rs.getString("code_medecin"));
 
 			}
-			System.out.println("Medecin trouv�\n");
+			System.out.println("Medecin trouve\n");
 		} catch (SQLException e) {
 			System.out.println("Erreur lors de la recherche");
 			e.printStackTrace();
