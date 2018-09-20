@@ -1,0 +1,7 @@
+sn\objis\livraison4\dao\IDaoMedecin.class
+sn\objis\livraison4\dao\IDaoSecretaire.class
+sn\objis\livraison4\dao\IDaoPatient.class
+sn\objis\livraison4\dao\IDaoMedecinImpl.class
+sn\objis\livraison4\dao\IDaoSecretaireImpl.class
+sn\objis\livraison4\dao\IDaoPatientImpl.class
+sn\objis\livraison4\dao\IDaoGenerique.class

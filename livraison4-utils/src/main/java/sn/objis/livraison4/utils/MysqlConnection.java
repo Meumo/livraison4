@@ -32,7 +32,7 @@ public class MysqlConnection {
 	/**
 	 * Le mot de passe de la base de donnees
 	 */
-	private static String pwdDb = "mamadou";
+	private static String passworddDb = "mamadou";
 	/**
 	 * l'unique instance de connexion � la base
 	 */
@@ -53,7 +53,7 @@ public class MysqlConnection {
 	public static Connection getInstanceConnection() {
 		try {
 			if (conn == null) {// Accune connexion avec la base
-				conn = DriverManager.getConnection(url, userDb, pwdDb);
+				conn = DriverManager.getConnection(url, userDb, passworddDb);
 				System.out.println("\tConnexion �tablie avec la base");
 				System.out.println("------------------------------------------------------------");
 			}
