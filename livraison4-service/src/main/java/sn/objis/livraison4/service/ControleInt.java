@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  *
  */
 public class ControleInt {
-	private static Logger LOGGER = Logger.getLogger("InfoLogging");
+	private static Logger logger = Logger.getLogger("InfoLogging");
 	/**
 	 * La methode 'controleEntier' satic ne recoit rien comme Parametre et renvoie
 	 * un int
@@ -25,7 +25,7 @@ public class ControleInt {
 				numero = Integer.parseInt(sc.nextLine());
 				break;
 			} catch (Exception e) {
-				LOGGER.info("Mettez un entier svp!");
+				logger.info("Mettez un entier svp!");
 			}
 		} while (true);
 		return numero;

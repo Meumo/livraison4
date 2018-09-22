@@ -11,6 +11,8 @@ import java.util.logging.Logger;
  */
 public class Menu {
 	private static Logger logger = Logger.getLogger("InfoLogging");
+	private static final String RETOUR="6.Retour au menu precedent";
+	private static final String CHOIX="Faites votre choix(1/2/3/4/5/6)";
 	/**
 	 * La methode 'menu1()' static avec type de retour void code le menu general.
 	 */
@@ -37,9 +39,9 @@ public class Menu {
 		logger.info("3.Supprimer un medecin");
 		logger.info("4.Rechercher un medecin avec son code");
 		logger.info("5.Lister les medecins");
-		logger.info("6.Retour au menu precedent");
+		logger.info(RETOUR);
 
-		logger.info("Faites votre choix(1/2/3/4/5/6)");
+		logger.info(CHOIX);
 	}
 
 	/**
@@ -52,9 +54,9 @@ public class Menu {
 		logger.info("3.Supprimer un patient");
 		logger.info("4.Rechercher un patient avec son code");
 		logger.info("5.Lister les patients");
-		logger.info("6.Retour au menu precedent");
+		logger.info(RETOUR);
 
-		logger.info("Faites votre choix(1/2/3/4/5/6)");
+		logger.info(CHOIX);
 	}
 
 	/**
@@ -68,8 +70,8 @@ public class Menu {
 		logger.info("3.Supprimer une scretaire");
 		logger.info("4.Rechercher une secretaire avec son code");
 		logger.info("5.Lister les secretaires");
-		logger.info("6.Retour au menu precedent");
+		logger.info(RETOUR);
 
-		logger.info("Faites votre choix(1/2/3/4/5/6)");
+		logger.info(CHOIX);
 	}
 }
