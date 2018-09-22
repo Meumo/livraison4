@@ -23,7 +23,13 @@ import sn.objis.livraison4.service.Menu;
  *
  */
 public class Test {
-	private static Logger LOGGER = Logger.getLogger("InfoLogging");
+	private static final String NOM="Entrer le nom";
+	private static final String PRENOM="Entrer le prenom";
+	private static final String CHOIX="Verifiez votre choix";
+	private static final String MENU="Voulez-vous rester dans ce menu (o/n)?";
+	
+	private static final String SEXE="Entrer le sexe";
+	private static Logger logger = Logger.getLogger("InfoLogging");
 
 	public static void main(String[] args) {
 		Menu.menu1();
@@ -45,45 +51,45 @@ public class Test {
 
 				case 1:
 					Medecin medecin = new Medecin();
-					LOGGER.info("Entrer le nom");
+					logger.info(NOM);
 					medecin.setNomMedecin(sc.nextLine());
-					LOGGER.info("Entrer le prenom");
-					LOGGER.info("Entrer le sexe");
+					logger.info(PRENOM);
+					logger.info(SEXE);
 					medecin.setSexeMedecin(sc.nextLine());
 					medecin.setCodeMedecin(generateCode.generateCodeMedecin());
 					iServiceMedecinImpl.ajouter(medecin);
 					break;
 				case 2:
-					LOGGER.info("Entrer le code du medecin a modifier");
+					logger.info("Entrer le code du medecin a modifier");
 					String code = sc.nextLine();
 					Medecin nouveauMedecin = iServiceMedecinImpl.chercherParCode(code);
 					if (nouveauMedecin != null) {
-						LOGGER.info("Entrer le nouveau nom");
+						logger.info(NOM);
 						nouveauMedecin.setNomMedecin(sc.nextLine());
-						LOGGER.info("Entrer le nouveau prenom");
+						logger.info(PRENOM);
 						nouveauMedecin.setPrenomMedecin(sc.nextLine());
-						LOGGER.info("Entrer le nouveau sexe");
+						logger.info(SEXE);
 						nouveauMedecin.setSexeMedecin(sc.nextLine());
 						iServiceMedecinImpl.modifier(nouveauMedecin);
 					} else {
-						LOGGER.info("Cet code n'existe pas");
+						logger.info("Cet code n'existe pas");
 					}
 					break;
 				case 3:
-					LOGGER.info("Entrer le code du medecin a supprimer");
+					logger.info("Entrer le code du medecin a supprimer");
 					Medecin medecinASupprimer = iServiceMedecinImpl.chercherParCode(sc.nextLine());
 					if (medecinASupprimer != null)
 						iServiceMedecinImpl.supprimer(medecinASupprimer);
 					else
-						LOGGER.info("cet medecin n'existe pas");
+						logger.info("cet medecin n'existe pas");
 					break;
 				case 4:
-					LOGGER.info("Entrer le code du medecin a rechercher");
+					logger.info("Entrer le code du medecin a rechercher");
 					Medecin medecinARechercher = iServiceMedecinImpl.chercherParCode(sc.nextLine());
 					if (medecinARechercher != null)
 						System.out.println(medecinARechercher);
 					else
-						LOGGER.info("cet medecin n'existe pas");
+						logger.info("cet medecin n'existe pas");
 					break;
 				case 5:
 					List<Medecin> listMedecin = iServiceMedecinImpl.lire();
@@ -91,16 +97,16 @@ public class Test {
 						Stream<Medecin> str = listMedecin.stream();
 						str.forEach(System.out::println);
 					} else
-						LOGGER.info("La liste des medecins est vide");
+						logger.info("La liste des medecins est vide");
 					break;
 				case 6:
 					Test.main(args);
 					break;
 				default:
-					LOGGER.info("Verifiez votre choix");
+					logger.info(CHOIX);
 					break;
 				}
-				LOGGER.info("Voulez-vous rester dans ce menu (o/n)?");
+				logger.info(MENU);
 				rep = sc.nextLine();
 			} while (rep.equals("o") || rep.equals("O"));
 			Test.main(args);
@@ -114,80 +120,80 @@ public class Test {
 
 				case 1:
 					Patient patient = new Patient();
-					LOGGER.info("Entrer le nom");
+					logger.info(NOM);
 					patient.setNomPatient(sc.nextLine());
-					LOGGER.info("Entrer le prenom");
+					logger.info("PRENOM");
 					patient.setPrenomPatient(sc.nextLine());
-					LOGGER.info("Entrer le sexe");
+					logger.info(SEXE);
 					patient.setSexePatient(sc.nextLine());
-					LOGGER.info("Entrer l'age");
+					logger.info("Entrer l'age");
 					int age = ControleInt.controleEntier();
 					patient.setAgePatient(age);
-					LOGGER.info("Entrer l'adresse");
+					logger.info("Entrer l'adresse");
 					patient.setAdressePatient(sc.nextLine());
-					LOGGER.info("Entrer l'assurance");
+					logger.info("Entrer l'assurance");
 					patient.setAssurancePatient(sc.nextLine());
 					patient.setCodePatient(generateCode.generateCodePatient());
 					iServicePatientImpl.ajouter(patient);
 					break;
 				case 2:
-					LOGGER.info("Entrer le code du patient a modifier");
+					logger.info("Entrer le code du patient a modifier");
 					String code = sc.nextLine();
 					Patient nouveauPatient = iServicePatientImpl.chercherParCode(code);
 					if (nouveauPatient != null) {
-						LOGGER.info("Entrer le nouveau nom");
+						logger.info(NOM);
 						nouveauPatient.setNomPatient(sc.nextLine());
-						LOGGER.info("Entrer le nouveau prenom");
+						logger.info(PRENOM);
 						nouveauPatient.setPrenomPatient(sc.nextLine());
-						LOGGER.info("Entrer le sexe");
+						logger.info(SEXE);
 						nouveauPatient.setSexePatient(sc.nextLine());
-						LOGGER.info("Entrer l'age");
+						logger.info("Entrer l'age");
 						int nouvoAge = ControleInt.controleEntier();
 						nouveauPatient.setAgePatient(nouvoAge);
-						LOGGER.info("Entrer le nouveau adresse");
+						logger.info("Entrer le nouveau adresse");
 						nouveauPatient.setAdressePatient(sc.nextLine());
-						LOGGER.info("Entrer l'assurance");
+						logger.info("Entrer l'assurance");
 						nouveauPatient.setAssurancePatient(sc.nextLine());
 						iServicePatientImpl.modifier(nouveauPatient);
 					} else {
-						LOGGER.info("Le code n'existe pas");
+						logger.info("Le code n'existe pas");
 					}
 					break;
 				case 3:
-					LOGGER.info("Entrer le code du patient a supprimer");
+					logger.info("Entrer le code du patient a supprimer");
 					String codeSup = sc.nextLine();
 					Patient patientASupprimer = iServicePatientImpl.chercherParCode(codeSup);
 					if (patientASupprimer != null)
 						iServicePatientImpl.supprimer(patientASupprimer);
 					else
-						LOGGER.info("cet patient n'existe pas");
+						logger.info("cet patient n'existe pas");
 					break;
 				case 4:
-					LOGGER.info("Entrer le code du patient a rechercher");
+					logger.info("Entrer le code du patient a rechercher");
 					String codePat = sc.nextLine();
 					Patient patientARechercher = iServicePatientImpl.chercherParCode(codePat);
 					if (patientARechercher != null)
 						System.out.println(patientARechercher);
 					else
-						LOGGER.info("cet patient n'existe pas");
+						logger.info("cet patient n'existe pas");
 					break;
 				case 5:
 					List<Patient> listPatient = iServicePatientImpl.lire();
 					if (listPatient != null) {
 						Stream<Patient> str = listPatient.stream();
 						str.forEach(System.out::println);
-						LOGGER.info("");
+						logger.info("");
 					} else
-						LOGGER.info("La liste des patients est vide");
+						logger.info("La liste des patients est vide");
 					break;
 				case 6:
 					Test.main(args);
 					break;
 				default:
-					LOGGER.info("Verifiez votre choix");
+					logger.info(CHOIX);
 					break;
 				}
-				LOGGER.info("Voulez-vous rester dans ce menu (o/n)?");
+				logger.info(MENU);
 				rep1 = sc.nextLine();
 			} while (rep1.equals("o") || rep1.equals("O"));
 			Test.main(args);
@@ -201,76 +207,76 @@ public class Test {
 
 				case 1:
 					Secretaire secretaire = new Secretaire();
-					LOGGER.info("Entrer le nom");
+					logger.info(NOM);
 					secretaire.setNomSecretaire(sc.nextLine());
-					LOGGER.info("Entrer le prenom");
+					logger.info(PRENOM);
 					secretaire.setPrenomSecretaire(sc.nextLine());
 					secretaire.setCodeSecretaire(generateCode.generateCodeSecretaire());
 					iServiceSecretaireImpl.ajouter(secretaire);
 					break;
 				case 2:
-					LOGGER.info("Entrer le code secretaire a modifier");
+					logger.info("Entrer le code secretaire a modifier");
 					String code = sc.nextLine();
 					Secretaire nouvelleSecretaire = iServiceSecretaireImpl.chercherParCode(code);
 					if (nouvelleSecretaire != null) {
-						LOGGER.info("Entrer le nouveau nom");
+						logger.info(NOM);
 						nouvelleSecretaire.setNomSecretaire(sc.nextLine());
-						LOGGER.info("Entrer le nouveau prenom");
+						logger.info(PRENOM);
 						nouvelleSecretaire.setPrenomSecretaire(sc.nextLine());
 						iServiceSecretaireImpl.modifier(nouvelleSecretaire);
 					} else {
-						LOGGER.info("Le code n'existe pas");
+						logger.info("Le code n'existe pas");
 					}
 					break;
 				case 3:
-					LOGGER.info("Entrer le code secretaire a supprimer");
+					logger.info("Entrer le code secretaire a supprimer");
 					String codeSecASup = sc.nextLine();
 					Secretaire secretaireASup = iServiceSecretaireImpl.chercherParCode(codeSecASup);
 					if (secretaireASup != null)
 						iServiceSecretaireImpl.supprimer(secretaireASup);
 					else
-						LOGGER.info("cette secretaire n'existe pas");
+						logger.info("cette secretaire n'existe pas");
 					break;
 				case 4:
-					LOGGER.info("Entrer le code secretaire a rechercher");
+					logger.info("Entrer le code secretaire a rechercher");
 					String codeSecARech = sc.nextLine();
 					Secretaire secretaireARech = iServiceSecretaireImpl.chercherParCode(codeSecARech);
 					if (secretaireARech != null)
 						System.out.println(secretaireARech);
 					else
-						LOGGER.info("cette secretaire n'existe pas");
+						logger.info("cette secretaire n'existe pas");
 					break;
 				case 5:
 					List<Secretaire> listSecretaire = iServiceSecretaireImpl.lire();
 					if (listSecretaire != null) {
 						Stream<Secretaire> str = listSecretaire.stream();
 						str.forEach(System.out::println);
-						LOGGER.info("");
+						logger.info("");
 					} else
-						LOGGER.info("La liste des secretaires est vide");
+						logger.info("La liste des secretaires est vide");
 					break;
 				case 6:
 					Test.main(args);
 					break;
 				default:
-					LOGGER.info("Verifiez votre choix");
+					logger.info(CHOIX);
 					break;
 				}
-				LOGGER.info("Voulez-vous rester dans ce menu (o/n)?");
+				logger.info(MENU);
 				rep2 = sc.nextLine();
 			} while (rep2.equals("o") || rep2.equals("O"));
 			Test.main(args);
 			break;
 		case 4:
-			LOGGER.info("Voulez-vous vraiment quitter l'application (o/n)?");
+			logger.info("Voulez-vous vraiment quitter l'application (o/n)?");
 			String res = sc.nextLine();
 			if (res.equals("o") || res.equals("O")) {
-				LOGGER.info("Aurevoir A Bientot!!");
+				logger.info("Aurevoir A Bientot!!");
 				System.exit(0);
 			} else
 				Test.main(args);
 		default:
-			LOGGER.info("Verifiez votre choix(1/2/3/4)");
+			logger.info(CHOIX+"(1/2/3/4)");
 			Test.main(args);
 			break;
 		}

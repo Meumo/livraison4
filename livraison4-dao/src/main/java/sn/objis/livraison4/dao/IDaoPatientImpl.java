@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import sn.objis.livraison4.domaine.Patient;
 import sn.objis.livraison4.utils.MysqlConnection;
@@ -20,7 +19,6 @@ import sn.objis.livraison4.utils.MysqlConnection;
  * @see IDaoPatient
  */
 public class IDaoPatientImpl implements IDaoPatient {
-	private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
 	/**
 	 * Creation d'une instance de connexion pour acceder a la base de donnees
@@ -41,9 +39,7 @@ public class IDaoPatientImpl implements IDaoPatient {
 			ps.setString(7, x.getCodePatient());
 			ps.executeUpdate();
 
-			LOGGER.info("Ajout reussi");
 		} catch (SQLException e) {
-			LOGGER.info("Erreur lors de l'ajout");
 			e.printStackTrace();
 		}
 	}
@@ -68,7 +64,6 @@ public class IDaoPatientImpl implements IDaoPatient {
 				listPatient.add(patient);
 			}
 		} catch (SQLException e) {
-			LOGGER.info("Erreur lors de la lecture");
 			e.printStackTrace();
 		}
 		return listPatient;
@@ -86,9 +81,7 @@ public class IDaoPatientImpl implements IDaoPatient {
 			ps.setString(6, x.getAssurancePatient());
 			ps.setString(7, x.getCodePatient());
 			ps.executeUpdate();
-			LOGGER.info("Mis a jour reussie");
 		} catch (SQLException e) {
-			LOGGER.info("Erreur Mis a jour ");
 			e.printStackTrace();
 		}
 
@@ -100,9 +93,7 @@ public class IDaoPatientImpl implements IDaoPatient {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, x.getCodePatient());
 			ps.executeUpdate();
-			LOGGER.info("Suppression reussie");
 		} catch (SQLException e) {
-			LOGGER.info("Erreur lors de la suppression");
 			e.printStackTrace();
 		}
 	}
@@ -121,7 +112,6 @@ public class IDaoPatientImpl implements IDaoPatient {
 
 			}
 		} catch (SQLException e) {
-			LOGGER.info("Erreur lors de la recherche");
 			e.printStackTrace();
 		}
 

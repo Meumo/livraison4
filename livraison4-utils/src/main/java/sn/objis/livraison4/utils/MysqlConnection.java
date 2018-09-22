@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  *
  */
 public class MysqlConnection {
-	private static Logger LOGGER = Logger.getLogger("InfoLogging");
+	private static Logger logger = Logger.getLogger("InfoLogging");
 	/**
 	 * url pour acceder a la base de donnees
 	 */
@@ -55,11 +55,11 @@ public class MysqlConnection {
 		try {
 			if (conn == null) {
 				conn = DriverManager.getConnection(url, userDb, passworddDb);
-				LOGGER.info("\tConnexion etablie avec la base");
-				LOGGER.info("------------------------------------------------------------");
+				logger.info("\tConnexion etablie avec la base");
+				logger.info("------------------------------------------------------------");
 			}
 		} catch (SQLException e) {
-			LOGGER.info("Probleme de connexion");
+			logger.info("Probleme de connexion");
 			e.printStackTrace();
 		}
 		return conn;
