@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import sn.objis.livraison4.domaine.Secretaire;
 import sn.objis.livraison4.utils.MysqlConnection;
@@ -20,7 +21,7 @@ import sn.objis.livraison4.utils.MysqlConnection;
  * @see IDaoSecretaire
  */
 public class IDaoSecretaireImpl implements IDaoSecretaire {
-
+	private static Logger LOGGER = Logger.getLogger("InfoLogging");
 	/**
 	 * Creation d'une instance de connexion pour acceder a la base de donnees
 	 */
@@ -34,10 +35,10 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 			ps.setString(2, x.getPrenomSecretaire());
 			ps.setString(3, x.getCodeSecretaire());
 			ps.executeUpdate();
-			System.out.println("Insertion reussie");
+			LOGGER.info("Insertion reussie");
 
 		} catch (SQLException e) {
-			System.out.println("Erreur lors de l'insertion");
+			LOGGER.info("Erreur lors de l'insertion");
 			e.printStackTrace();
 		}
 	}
@@ -59,7 +60,7 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 				listSecretaire.add(secretaire);
 			}
 		} catch (SQLException e) {
-			System.out.println("Erreur de la lecture");
+			LOGGER.info("Erreur de la lecture");
 			e.printStackTrace();
 		}
 		return listSecretaire;
@@ -73,9 +74,9 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 			ps.setString(2, x.getPrenomSecretaire());
 			ps.setString(3, x.getCodeSecretaire());
 			ps.executeUpdate();
-			System.out.println("Mis a jour reussie");
+			LOGGER.info("Mis a jour reussie");
 		} catch (SQLException e) {
-			System.out.println("Erreur Mis a jour ");
+			LOGGER.info("Erreur Mis a jour ");
 			e.printStackTrace();
 		}
 	}
@@ -86,9 +87,9 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, x.getCodeSecretaire());
 			ps.executeUpdate();
-			System.out.println("Suppression reussie");
+			LOGGER.info("Suppression reussie");
 		} catch (SQLException e) {
-			System.out.println("Erreur lors de la suppression");
+			LOGGER.info("Erreur lors de la suppression");
 			e.printStackTrace();
 		}
 	}
@@ -106,7 +107,7 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 
 			}
 		} catch (SQLException e) {
-			System.out.println("Erreur lors de la recherche");
+			LOGGER.info("Erreur lors de la recherche");
 			e.printStackTrace();
 		}
 

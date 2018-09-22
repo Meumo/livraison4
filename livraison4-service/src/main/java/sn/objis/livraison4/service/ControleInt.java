@@ -1,6 +1,7 @@
 package sn.objis.livraison4.service;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Date 2018-07-24 # Cette classe 'ControleInt' controle la saisie des entiers
@@ -9,6 +10,7 @@ import java.util.Scanner;
  *
  */
 public class ControleInt {
+	private static Logger LOGGER = Logger.getLogger("InfoLogging");
 	/**
 	 * La methode 'controleEntier' satic ne recoit rien comme Parametre et renvoie
 	 * un int
@@ -23,7 +25,7 @@ public class ControleInt {
 				numero = Integer.parseInt(sc.nextLine());
 				break;
 			} catch (Exception e) {
-				System.out.println("Mettez un entier svp!");
+				LOGGER.info("Mettez un entier svp!");
 			}
 		} while (true);
 		return numero;

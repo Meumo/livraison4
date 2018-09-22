@@ -10,6 +10,7 @@ package sn.objis.livraison4.utils;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 /**
  * Date Juillet 23-2018 # Cette classe met en oeuvre le design pattern singleton
@@ -20,7 +21,7 @@ import java.sql.SQLException;
  *
  */
 public class MysqlConnection {
-
+	private static Logger LOGGER = Logger.getLogger("InfoLogging");
 	/**
 	 * url pour acceder a la base de donnees
 	 */
@@ -54,11 +55,11 @@ public class MysqlConnection {
 		try {
 			if (conn == null) {
 				conn = DriverManager.getConnection(url, userDb, passworddDb);
-				System.out.println("\tConnexion etablie avec la base");
-				System.out.println("------------------------------------------------------------");
+				LOGGER.info("\tConnexion etablie avec la base");
+				LOGGER.info("------------------------------------------------------------");
 			}
 		} catch (SQLException e) {
-			System.out.println("Probleme de connexion");
+			LOGGER.info("Probleme de connexion");
 			e.printStackTrace();
 		}
 		return conn;

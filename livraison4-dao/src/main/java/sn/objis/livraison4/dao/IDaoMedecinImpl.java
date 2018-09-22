@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import sn.objis.livraison4.domaine.Medecin;
 import sn.objis.livraison4.utils.MysqlConnection;
@@ -19,6 +20,7 @@ import sn.objis.livraison4.utils.MysqlConnection;
  * @see IDaoMedecin
  */
 public class IDaoMedecinImpl implements IDaoMedecin {
+	private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
 	/**
 	 * Creation d'une instance de connexion pour acceder a la base de donnees
@@ -34,10 +36,10 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 			ps.setString(3, x.getSexeMedecin());
 			ps.setString(4, x.getCodeMedecin());
 			ps.executeUpdate();
-			System.out.println("Insertion reussie");
+			LOGGER.info("Insertion reussie");
 
 		} catch (SQLException e) {
-			System.out.println("Erreur lors de l'insertion");
+			LOGGER.info("Erreur lors de l'insertion");
 			e.printStackTrace();
 		}
 	}
@@ -60,7 +62,7 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 				listMedecin.add(medecin);
 			}
 		} catch (SQLException e) {
-			System.out.println("Erreur de la lecture");
+			LOGGER.info("Erreur de la lecture");
 			e.printStackTrace();
 		}
 		return listMedecin;
@@ -75,9 +77,9 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 			ps.setString(3, x.getSexeMedecin());
 			ps.setString(4, x.getCodeMedecin());
 			ps.executeUpdate();
-			System.out.println("Mis a jour reussie");
+			LOGGER.info("Mis a jour reussie");
 		} catch (SQLException e) {
-			System.out.println("Erreur Mis a jour ");
+			LOGGER.info("Erreur Mis a jour ");
 			e.printStackTrace();
 		}
 	}
@@ -88,9 +90,9 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, x.getCodeMedecin());
 			ps.executeUpdate();
-			System.out.println("Suppression reussie");
+			LOGGER.info("Suppression reussie");
 		} catch (SQLException e) {
-			System.out.println("Erreur lors de la suppression");
+			LOGGER.info("Erreur lors de la suppression");
 			e.printStackTrace();
 		}
 	}
@@ -107,9 +109,9 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 						rs.getString("prenom_medecin"), rs.getString("sexe_medecin"), rs.getString("code_medecin"));
 
 			}
-			System.out.println("Medecin trouve\n");
+			LOGGER.info("Medecin trouve\n");
 		} catch (SQLException e) {
-			System.out.println("Erreur lors de la recherche");
+			LOGGER.info("Erreur lors de la recherche");
 			e.printStackTrace();
 		}
 
