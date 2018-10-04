@@ -26,8 +26,12 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 	Connection con = MysqlConnection.getInstanceConnection();
 
 	public void create(Secretaire x) {
+		String sql = "INSERT INTO secretaire(nom_secretaire,prenom_secretaire,code_secretaire) values (?,?,?)";
+		creaUp(x, sql);
+	}
+
+	private void creaUp(Secretaire x, String sql) {
 		try {
-			String sql = "INSERT INTO secretaire(nom_secretaire,prenom_secretaire,code_secretaire) values (?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, x.getNomSecretaire());
 			ps.setString(2, x.getPrenomSecretaire());
@@ -62,16 +66,9 @@ public class IDaoSecretaireImpl implements IDaoSecretaire {
 	}
 
 	public void update(Secretaire x) {
-		try {
-			String sql = "UPDATE secretaire SET nom_secretaire=?, prenom_secretaire=?  WHERE code_secretaire=?";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, x.getNomSecretaire());
-			ps.setString(2, x.getPrenomSecretaire());
-			ps.setString(3, x.getCodeSecretaire());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		String sql = "UPDATE secretaire SET nom_secretaire=?, prenom_secretaire=?  WHERE code_secretaire=?";
+
+		creaUp(x, sql);
 	}
 
 	public void delete(Secretaire x) {

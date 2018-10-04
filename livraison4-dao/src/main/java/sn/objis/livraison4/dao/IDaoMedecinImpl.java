@@ -25,8 +25,12 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 	Connection con = MysqlConnection.getInstanceConnection();
 
 	public void create(Medecin x) {
+		String sql = "INSERT INTO medecin(nom_medecin,prenom_medecin,sexe_medecin,code_medecin) values (?,?,?,?)";
+		creaUp(x, sql);
+	}
+
+	private void creaUp(Medecin x, String sql) {
 		try {
-			String sql = "INSERT INTO medecin(nom_medecin,prenom_medecin,sexe_medecin,code_medecin) values (?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, x.getNomMedecin());
 			ps.setString(2, x.getPrenomMedecin());
@@ -62,17 +66,9 @@ public class IDaoMedecinImpl implements IDaoMedecin {
 	}
 
 	public void update(Medecin x) {
-		try {
-			String sql = "UPDATE medecin SET nom_medecin=?, prenom_medecin=?, sexe_medecin=? WHERE code_medecin=?";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, x.getNomMedecin());
-			ps.setString(2, x.getPrenomMedecin());
-			ps.setString(3, x.getSexeMedecin());
-			ps.setString(4, x.getCodeMedecin());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		String sql = "UPDATE medecin SET nom_medecin=?, prenom_medecin=?, sexe_medecin=? WHERE code_medecin=?";
+
+		creaUp(x, sql);
 	}
 
 	public void delete(Medecin x) {

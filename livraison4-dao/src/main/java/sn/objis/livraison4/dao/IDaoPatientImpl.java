@@ -26,9 +26,13 @@ public class IDaoPatientImpl implements IDaoPatient {
 	Connection con = MysqlConnection.getInstanceConnection();
 
 	public void create(Patient x) {
+		String sql = "INSERT INTO patient(nom_patient, prenom_patient, sexe_patient, age_patient, adresse_patient, assurance, code_patient)"
+				+ " VALUES (?,?,?,?,?,?,?)";
+		creaUp(x, sql);
+	}
+
+	private void creaUp(Patient x, String sql) {
 		try {
-			String sql = "INSERT INTO patient(nom_patient, prenom_patient, sexe_patient, age_patient, adresse_patient, assurance, code_patient)"
-					+ " VALUES (?,?,?,?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, x.getNomPatient());
 			ps.setString(2, x.getPrenomPatient());
@@ -70,20 +74,8 @@ public class IDaoPatientImpl implements IDaoPatient {
 	}
 
 	public void update(Patient x) {
-		try {
-			String sql = "UPDATE patient SET nom_patient=?, prenom_patient=?, sexe_patient=?, age_patient=?, adresse_patient=?, assurance=? WHERE code_patient=?";
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, x.getNomPatient());
-			ps.setString(2, x.getPrenomPatient());
-			ps.setString(3, x.getSexePatient());
-			ps.setInt(4, x.getAgePatient());
-			ps.setString(5, x.getAdressePatient());
-			ps.setString(6, x.getAssurancePatient());
-			ps.setString(7, x.getCodePatient());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		String sql = "UPDATE patient SET nom_patient=?, prenom_patient=?, sexe_patient=?, age_patient=?, adresse_patient=?, assurance=? WHERE code_patient=?";
+		creaUp(x, sql);
 
 	}
 
