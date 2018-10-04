@@ -275,6 +275,7 @@ public class Test {
 				System.exit(0);
 			} else
 				Test.main(args);
+			break;
 		default:
 			logger.info(CHOIX+"(1/2/3/4)");
 			Test.main(args);
