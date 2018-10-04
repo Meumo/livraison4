@@ -98,7 +98,7 @@ public class IDaoPatientImpl implements IDaoPatient {
 			ps.setString(1, code);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				patientRecup = new Patient(rs.getLong("id_patient"), rs.getString("nom_patient"),
+				patientRecup = new Patient(rs.getString("nom_patient"),
 						rs.getString("prenom_patient"), rs.getString("sexe_patient"), rs.getInt("age_patient"),
 						rs.getString("adresse_patient"), rs.getString("assurance"), rs.getString("code_patient"));
 
