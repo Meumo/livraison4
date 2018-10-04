@@ -10,6 +10,10 @@ import java.util.logging.Logger;
  *
  */
 public class ControleInt {
+	
+	private ControleInt() {
+		super();
+	}
 	private static Logger logger = Logger.getLogger("InfoLogging");
 	/**
 	 * La methode 'controleEntier' satic ne recoit rien comme Parametre et renvoie

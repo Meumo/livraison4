@@ -94,10 +94,11 @@ public class Test {
 				case 5:
 					List<Medecin> listMedecin = iServiceMedecinImpl.lire();
 					if (listMedecin != null) {
-						Stream<Medecin> str = listMedecin.stream();
-						str.forEach(System.out::println);
-					} else
-						logger.info("La liste des medecins est vide");
+						for (Medecin medecin2 : listMedecin) {
+							logger.info(medecin2.toString());
+						}
+					} else {
+						logger.info("La liste des medecins est vide");}
 					break;
 				case 6:
 					Test.main(args);
@@ -180,11 +181,13 @@ public class Test {
 				case 5:
 					List<Patient> listPatient = iServicePatientImpl.lire();
 					if (listPatient != null) {
-						Stream<Patient> str = listPatient.stream();
-						str.forEach(System.out::println);
-						logger.info("");
-					} else
-						logger.info("La liste des patients est vide");
+						for (Patient patient2 : listPatient) {
+							logger.info(patient2.toString());
+							logger.info("");
+						}
+		
+					} else {
+						logger.info("La liste des patients est vide");}
 					break;
 				case 6:
 					Test.main(args);
@@ -249,9 +252,10 @@ public class Test {
 				case 5:
 					List<Secretaire> listSecretaire = iServiceSecretaireImpl.lire();
 					if (listSecretaire != null) {
-						Stream<Secretaire> str = listSecretaire.stream();
-						str.forEach(System.out::println);
-						logger.info("");
+						for (Secretaire secretaire2 : listSecretaire) {
+							logger.info(secretaire2.toString());
+							logger.info("");
+						}
 					} else {
 						logger.info("La liste des secretaires est vide");}
 					break;
