@@ -71,7 +71,7 @@ public class Patient {
 	 * @param codePatient
 	 *            Parametre qui stocke le code
 	 */
-	public Patient(long idPatient, String nomPatient, String prenomPatient, String sexePatient, int agePatient,
+	/**public Patient(long idPatient, String nomPatient, String prenomPatient, String sexePatient, int agePatient,
 			String adressePatient, String assurancePatient, String codePatient) {
 		super();
 		this.idPatient = idPatient;
@@ -82,7 +82,7 @@ public class Patient {
 		this.adressePatient = adressePatient;
 		this.assurancePatient = assurancePatient;
 		this.codePatient = codePatient;
-	}
+	}*/
 
 	/**
 	 * Constructeur avec arguments (String nomPatient, String prenomPatient, String

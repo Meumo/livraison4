@@ -87,7 +87,7 @@ public class Test {
 					logger.info("Entrer le code du medecin a rechercher");
 					Medecin medecinARechercher = iServiceMedecinImpl.chercherParCode(sc.nextLine());
 					if (medecinARechercher != null)
-						System.out.println(medecinARechercher);
+						logger.info(medecinARechercher.toString());
 					else
 						logger.info("cet medecin n'existe pas");
 					break;
@@ -173,7 +173,7 @@ public class Test {
 					String codePat = sc.nextLine();
 					Patient patientARechercher = iServicePatientImpl.chercherParCode(codePat);
 					if (patientARechercher != null)
-						System.out.println(patientARechercher);
+						logger.info(patientARechercher.toString());
 					else
 						logger.info("cet patient n'existe pas");
 					break;
@@ -242,7 +242,7 @@ public class Test {
 					String codeSecARech = sc.nextLine();
 					Secretaire secretaireARech = iServiceSecretaireImpl.chercherParCode(codeSecARech);
 					if (secretaireARech != null)
-						System.out.println(secretaireARech);
+						logger.info(secretaireARech.toString());
 					else
 						logger.info("cette secretaire n'existe pas");
 					break;
@@ -252,8 +252,8 @@ public class Test {
 						Stream<Secretaire> str = listSecretaire.stream();
 						str.forEach(System.out::println);
 						logger.info("");
-					} else
-						logger.info("La liste des secretaires est vide");
+					} else {
+						logger.info("La liste des secretaires est vide");}
 					break;
 				case 6:
 					Test.main(args);

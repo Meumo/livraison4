@@ -17,6 +17,7 @@ import sn.objis.livraison4.utils.MysqlConnection;
  */
 public class GenerateCode {
 
+	private static final String SELECT_FROM_CODE = "SELECT * FROM code";
 	/**
 	 * Creation d'une instance de connexion pour acceder a la base de donnees
 	 */
@@ -32,7 +33,7 @@ public class GenerateCode {
 		int sufMed = 0;
 		String prefMed = null;
 		try {
-			String sql = "SELECT * FROM code";
+			String sql = SELECT_FROM_CODE;
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			while (rs.next()) {
@@ -61,7 +62,7 @@ public class GenerateCode {
 		int sufPat = 0;
 		String prefPat = null;
 		try {
-			String sql = "SELECT * FROM code";
+			String sql = SELECT_FROM_CODE;
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			while (rs.next()) {
@@ -90,7 +91,7 @@ public class GenerateCode {
 		int sufSec = 0;
 		String preSec = null;
 		try {
-			String sql = "SELECT * FROM code";
+			String sql = SELECT_FROM_CODE;
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			while (rs.next()) {

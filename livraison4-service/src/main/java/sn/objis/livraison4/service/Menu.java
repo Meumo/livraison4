@@ -13,6 +13,11 @@ public class Menu {
 	private static Logger logger = Logger.getLogger("InfoLogging");
 	private static final String RETOUR="6.Retour au menu precedent";
 	private static final String CHOIX="Faites votre choix(1/2/3/4/5/6)";
+	
+	private Menu() {
+		super();
+	}
+
 	/**
 	 * La methode 'menu1()' static avec type de retour void code le menu general.
 	 */
